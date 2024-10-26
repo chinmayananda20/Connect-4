@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(203, 202, 202);
+}
+
+.content {
+  background-color: white;
+  width: 50%;
+  border-radius: 30px;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 95%;
+  margin-top: 5vh;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.container img {
+  height: 10vh;
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: larger;
+}
+.btn {
+  width: 90%;
+  padding: 15px 0px;
+  border-radius: 10px;
+  background-color: #0080ff;
+  border: 0px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  cursor: pointer;
+  font-size: larger;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.btn:hover {
+  background-color: #429af1;
+}
+.modal{
+  position: fixed;
+  display: flex;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+.primarymodal{
+  background-color: white;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.secondarymodal{
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.option{
+  background-color: #edeaf5;
+  height: 60px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.option input{
+  margin: 0px 20px;
+}
+@media screen and (max-width: 900px) {
+  .content {
+    width: 90%;
+  }
+  .option{
+    width: 250px;
+  }
+}
+@media screen and (max-width: 700px){
+     
+    .container{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-height: 700px){
+    .btn{
+        height: 35px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+  .primarymodal{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .primarymodal{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .secondarymodal{
+    width: 90%;
+  }
+}

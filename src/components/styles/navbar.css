@@ -1,0 +1,25 @@
+.navbar {
+    background-color: red;
+    height: 10vh;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .back {
+    position: absolute;
+    left: 0px;
+  }
+
+  @media screen and (max-width: 700px){
+    .back{
+        font-size: 10px;
+    }
+    .navbar p{
+        font-size: 12px;
+    }
+    
+    
+}
