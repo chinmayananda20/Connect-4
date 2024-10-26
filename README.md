@@ -1,6 +1,5 @@
 # Live Demo
-https://github.com/chinmayananda20/Connect-4
-
+https://connect-4-tan.vercel.app/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
