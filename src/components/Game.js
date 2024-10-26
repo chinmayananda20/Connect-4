@@ -22,7 +22,7 @@ export default function Game() {
   const [showCongrats, setShowCongrats] = useState(false);
   const [tournamentWon, setTournamentWon] = useState(false);
   const [tournamentDraw, setTournamentDraw] = useState(false);
-  const [lastRoundWinner, setLastRoundWinner] = useState(null); // Track last round winner
+  const [lastRoundWinner, setLastRoundWinner] = useState(null); 
 
   const changeTurn = () => {
     if (turn === player1) {
@@ -36,7 +36,7 @@ export default function Game() {
 
   const checkWin = (newBoard) => {
     const winningCombinations = [
-      // Horizontal check
+      
       ...Array.from({ length: 6 }, (_, row) =>
         Array.from({ length: 4 }, (_, col) => [
           row * 7 + col,
@@ -45,7 +45,7 @@ export default function Game() {
           row * 7 + col + 3,
         ])
       ).flat(),
-      // Vertical check
+      
       ...Array.from({ length: 3 }, (_, row) =>
         Array.from({ length: 7 }, (_, col) => [
           row * 7 + col,
@@ -54,7 +54,7 @@ export default function Game() {
           (row + 3) * 7 + col,
         ])
       ).flat(),
-      // Diagonal check (down-right)
+      
       ...Array.from({ length: 3 }, (_, row) =>
         Array.from({ length: 4 }, (_, col) => [
           row * 7 + col,
@@ -63,7 +63,7 @@ export default function Game() {
           (row + 3) * 7 + col + 3,
         ])
       ).flat(),
-      // Diagonal check (up-right)
+      
       ...Array.from({ length: 3 }, (_, row) =>
         Array.from({ length: 4 }, (_, col) => [
           (row + 3) * 7 + col,
@@ -124,7 +124,7 @@ export default function Game() {
         return updatedScores;
       });
 
-      setLastRoundWinner(turn); // Save the current winner for the next round
+      setLastRoundWinner(turn);
       setRoundMessage(`${turn}, You won Game ${currentRound}!`);
       setRoundCompleted(true);
       setShowCongrats(true);
@@ -145,7 +145,7 @@ export default function Game() {
         setPlayerImg(lastRoundWinner === player1 ? img2 : img1);
         break;
       case "Winner First":
-        setTurn(lastRoundWinner || player1); // Defaults to player1 in the first round
+        setTurn(lastRoundWinner || player1); 
         setPlayerImg(lastRoundWinner === player1 ? img1 : img2);
         break;
       case "Always player 01":
@@ -157,7 +157,7 @@ export default function Game() {
         setPlayerImg(img2);
         break;
       default:
-        setTurn(player1); // Default to player1 if no valid starter value is given
+        setTurn(player1);  
         setPlayerImg(img1);
     }
   };
@@ -170,7 +170,7 @@ export default function Game() {
       setWinner(null);
       setRoundCompleted(false);
       setShowCongrats(false);
-      determineStarter(); // Set the starter for the next round based on the 'starter' prop
+      determineStarter();
     }
   };
 
@@ -200,8 +200,8 @@ export default function Game() {
     setShowCongrats(false);
     setTournamentWon(false);
     setTournamentDraw(false);
-    setLastRoundWinner(null); // Reset last round winner
-    determineStarter(); // Reset starter based on the initial condition
+    setLastRoundWinner(null);
+    determineStarter(); 
   };
 
   return (
